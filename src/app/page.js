@@ -6,6 +6,8 @@ export default function Home() {
       <section className={styles.section}>
         <h1 className={styles.header}>A new economic primitive for funding  decentralized AI
         </h1>
+        <h1 className={styles.header}>A new economic primitive for funding  decentralized AI
+        </h1>
       </section>
       <section className={styles.section}>
         <h1>2</h1>
