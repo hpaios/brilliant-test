@@ -1,5 +1,5 @@
-@import './styles/variables';
-@import './styles/mixins';
+// @import './styles/variables';
+// @import './styles/mixins';
 
 .main {
   display: flex;
@@ -10,18 +10,19 @@
 }
 
 .header {
-  background: $gradient;
+  // background: $gradient;
  -webkit-background-clip: text;
-  color: transparent;
+  // 
+  color: red;
   font-size: 20px;
 
-  @include tablet {
-   font-size: 40px;
-  }
+  // @include tablet {
+  //  font-size: 40px;
+  // }
 
-  @include desktop {
-    font-size: 60px;
-  }
+  // @include desktop {
+  //   font-size: 60px;
+  // }
 }
 
 .section {

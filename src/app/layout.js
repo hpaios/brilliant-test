@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import "./globals.css";
+// import "./globals.css";
 
 const basicFont = localFont({
   src: './font/ClashGrotesk-Regular.woff',
