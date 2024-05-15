@@ -1,0 +1,47 @@
+@import './variables';
+
+.comet {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include desktop {
+    left: 200px;
+  }
+
+  img {
+    width: 180px;
+    height: auto;
+    display: inline-block;
+
+    @include tablet {
+      width: 262px;
+    }
+  }
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  z-index: -1;
+
+  @include desktop {
+    bottom: -80px;
+  }
+
+  img {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+
+    @include tablet {
+      width: 150px;
+    }
+
+    @include desktop {
+      width: 226px;
+      height: 750px;
+    }
+  }
+}

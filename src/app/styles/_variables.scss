@@ -1,7 +1,13 @@
 // Width
 $tablet-width: 767px;
 $desktop-width: 1200px;
+$desktop-width-xl: 1480px;
+$max-width: 1760px;
 
 // Colors
 $gradient: -webkit-linear-gradient(0deg, #B53EA4 3.07%, #FC6F32 47.61%, #FF4A59 93.05%);
 $gradient-btn: linear-gradient(106.2deg, rgba(150, 52, 136, 0.2) -12.33%, rgba(252, 111, 50, 0.2) 50.28%, rgba(255, 74, 89, 0.2) 114.17%);
+$bg-gradient: -webkit-linear-gradient(-90deg, #000, #141721);
+$black: #000;
+$white: #fff;
+$footer-bg: #141721;

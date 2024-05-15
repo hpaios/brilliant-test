@@ -1,27 +1,37 @@
 'use client';
+
 import { useParallax } from "react-scroll-parallax";
 import "./page.scss";
 
 export default function Home() {
   
   const parallaxComet = useParallax({
-    translateX: [0, 500],
-    translateY: [0, 2500],
+    translateX: [0, '100%'],
+    translateY: [0, '1000'],
   });
 
   const parallaxRocket = useParallax({
-    rotate: [0, 30]
+    translateX: [0, 50],
+    translateY: [0, -500],
+    rotate: [0, 60]
   });
 
   const parallaxStatistic = useParallax({
-    translateX: [0, 0],
     translateY: [200, 0],
+  });
+
+  const parallaxList = useParallax({
+    translateY: [300, 0],
+  });
+
+  const parallaxMoon = useParallax({
+    rotate: [0, 90]
   });
 
   return (
     <main className='main'>
-      <div class="parallax">
-        <div class="parallax-image">
+      <div className="parallax">
+        <div className="parallax-image">
           <img src="/planet.png" alt="planet" />
         </div>
         <div className="parallax-content">
@@ -34,14 +44,14 @@ export default function Home() {
                 <span>Leaderboard</span>
                 <button>Buy Spice AI</button>
               </div>
-              <h1 className='header'>
+              <h1>
                 A new economic primitive for funding  decentralized AI
               </h1>
               <p>
                 We track, rank and pay for the best open source decentralized LLMs to compete against OpenAI
               </p>
               <button>Buy Spice AI</button>
-              <div className="statistic-items"ref={parallaxStatistic.ref} >
+              <div className="statistic-items" ref={parallaxStatistic.ref} >
                 <div className="item">
                   <div className="value">
                     10,873
@@ -89,39 +99,35 @@ export default function Home() {
               <div className="rocket">
                 <img src="/rocket.png" alt="pocket" className='rocket' ref={parallaxRocket.ref}/>
               </div>
-              <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+              <h3>Projects integrated into the Arrakis AI Ecosystem</h3>
+              <ul ref={parallaxList.ref}>
+                <li><img src="/logo-1.png" alt="logo-1" /></li>
+                <li><img src="/logo-2.png" alt="logo-2" /></li>
+                <li><img src="/logo-3.png" alt="logo-3" /></li>
+                <li><img src="/logo-4.png" alt="logo-4" /></li>
               </ul>
             </div>
           </section>
         </div>
       </div>
-      <section className='section'>
+      <section className='section moon-section'>
         <div className="container">
-          <h1>4</h1>
+          <div>
+            <h3>Text here</h3>
+            <p>
+              Every month, we run a competition between all the AI models submitted on a leaderboard.
+              The best model will be featured and will earn tokens.
+            </p>
+            <button>Read Whitepaper</button>
+          </div>
+          <div className='moon'>
+            <img src="/moon.png" alt="moon" ref={parallaxMoon.ref}/>
+          </div>
         </div>
       </section>
-    <footer>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Leaderboard</a>
-        <a href="#">About</a>
-      </nav>
-      <div>
-        <div className="social">
-          <a href="#" className='telegram'>telegram</a>
-          <a href="#" className='twitter'>twitter</a>
-        </div>
-        <div className="policy">
-          <a href="#">Terms of Use</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Cookie Policy</a>
-        </div>
-      </div>
-    </footer>
+      <footer>
+        <img src="/space.png" alt="space"/>
+      </footer>
     </main>
   )
 }

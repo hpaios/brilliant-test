@@ -1,5 +1,4 @@
 import localFont from 'next/font/local';
-// import "./globals.css";
 import Parallax from './components/Parallax';
 
 const basicFont = localFont({
