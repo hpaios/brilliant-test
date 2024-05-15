@@ -1,5 +1,6 @@
 import localFont from 'next/font/local';
 // import "./globals.css";
+import Parallax from './components/Parallax';
 
 const basicFont = localFont({
   src: './font/ClashGrotesk-Regular.woff',
@@ -14,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={basicFont.className}>{children}</body>
+      <Parallax>
+        <body className={basicFont.className}>{children}</body>
+      </Parallax>
     </html>
   );
 }
